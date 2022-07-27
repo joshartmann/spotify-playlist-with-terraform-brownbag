@@ -44,6 +44,12 @@ data "spotify_track" "cheeseburger_jimmybuffet" {
 }
 
 
+data "spotify_track" "BYEBYEBYE" {
+  spotify_id = "62bOmKYxYg7dhrC6gH9vFn"
+}
+
+
+
 #### Playlsit ####
 
 resource "spotify_playlist" "playlist" {
@@ -59,5 +65,6 @@ resource "spotify_playlist" "playlist" {
     data.spotify_search_track.queen_topsongs.tracks[2].id,    
     # ADD YOUR SONG TO THE PLAYLIST HERE #
     data.spotify_track.cheeseburger_jimmybuffet.id,
+    data.spotify_track.BYEBYEBYE.id
   ]
 }
